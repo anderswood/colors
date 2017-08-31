@@ -1,16 +1,30 @@
-export const currentWeather (weatherData) {
+import { stubbedData } from './stubbed';
 
-  return {currentTime: 100, currentTemp: 80}
+export const currentWeather = () => {
+
+  return {
+    currentTime: stubbedData.currently.time,
+    summary: stubbedData.currently.summary,
+    currentTemp: 80
+  }
 }
 
-export const minutelyData () {
-  return {forecastType: 'Minutely'}
+export const minutelyData = () => {
+  console.log(stubbedData.minutely);
+
+  return {
+    forecastType: 'Minutely'
+  }
 }
 
-export const hourlyData () {
+export const hourlyData = () => {
+  console.log(stubbedData.hourly);
 
+  return {
+    forecastType: 'Hourly'
+  }
 }
 
-export const dailyData () {
+export const dailyData = () => {
 
 }
