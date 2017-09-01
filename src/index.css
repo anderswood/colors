@@ -7,5 +7,9 @@ body {
 .forecast-minutely {
   width: 40px;
   height: 40px;
-  /*background: magenta;*/
+}
+
+.App-container {
+  background-size: cover;
+  height: 100vh;
 }
