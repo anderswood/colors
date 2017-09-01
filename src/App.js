@@ -5,7 +5,8 @@ import './App.css';
 import Inputs from './Inputs';
 import Current from './Current';
 import Forecast from './Forecast';
-// import {conditions} from './conditionsObj';
+import { currentWeather } from './scrubber';
+import { conditions } from './conditionsObj';
 
 class App extends Component {
 
@@ -16,12 +17,16 @@ class App extends Component {
   }
 
   render() {
+    let currentDescription = currentWeather().icon;
+    let picURL = conditions[currentDescription].backgroundURL;
+    let divStyle = { background: `url(${picURL})` };
+
     return (
-      <div className="App">
+      <section className="App-container" style={divStyle} >
         <Inputs />
         <Current />
         <Forecast />
-      </div>
+      </section>
     );
   }
 }

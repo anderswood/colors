@@ -4,13 +4,14 @@ export const currentWeather = () => {
 
   return {
     currentTime: stubbedData.currently.time,
+    icon: stubbedData.currently.icon,
     summary: stubbedData.currently.summary,
     currentTemp: 80
   }
 }
 
 export const minutelyData = () => {
-  console.log(stubbedData.minutely);
+  // console.log(stubbedData.minutely);
 
   return {
     forecastType: 'Minutely'
@@ -18,7 +19,7 @@ export const minutelyData = () => {
 }
 
 export const hourlyData = () => {
-  console.log(stubbedData.hourly);
+  // console.log(stubbedData.hourly);
 
   return {
     forecastType: 'Hourly'
