@@ -10,7 +10,7 @@ const Forecast = () => {
   let currentDescription = currentWeather().icon;
   let rGBValues = conditions[currentDescription].color;
   let divStyle = { background: `rgb(${rGBValues})` };
-console.log(currentDescription);
+  
   return (
     <section className='forecast-container'>Forecasts
       <div className='forecast-minutely' style={divStyle}></div>
